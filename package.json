@@ -1,17 +1,17 @@
 {
-  "name": "textlint-rule-no-dropping-the-ra",
+  "name": "textlint-rule-no-dropping-the-ra-resola",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra.git"
+    "url": "git+https://github.com/chris-resola/textlint-rule-no-dropping-the-ra.git"
   },
-  "author": "azu",
-  "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra",
+  "author": "Chris Lerus",
+  "email": "c.michel@resola.ai",
+  "homepage": "https://github.com/chris-resola/textlint-rule-no-dropping-the-ra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra/issues"
+    "url": "https://github.com/chris-resola/textlint-rule-no-dropping-the-ra/issues"
   },
-  "version": "3.0.0",
+  "version": "1.0.0",
   "main": "lib/no-dropping-the-ra.js",
   "files": [
     "lib",
