@@ -24,7 +24,7 @@ function isSpecialCases(token) {
 
 export default function (context) {
     const helper = new RuleHelper(context);
-    const { Syntax, report, getSource, RuleError } = context;
+    const { Syntax, report, getSource, RuleError, fixer } = context;
     return {
         [Syntax.Str](node) {
             if (helper.isChildNode(node, [Syntax.Link, Syntax.Image, Syntax.BlockQuote, Syntax.Emphasis])) {
@@ -34,6 +34,8 @@ export default function (context) {
             return tokenize(text).then((tokens) => {
                 tokens.forEach((token) => {
                     if (isSpecialCases(token)) {
+                        console.log("token");
+                        console.log(token);
                         report(
                             node,
                             new RuleError("ら抜き言葉を使用しています。", {
@@ -51,7 +53,10 @@ export default function (context) {
                         report(
                             node,
                             new RuleError("ら抜き言葉を使用しています。", {
-                                index: current.word_position - 1
+                                index: current.word_position - 1,
+                                fix: fixer.replaceTextRange(
+                                    [prev.word_position - 1, current.word_position - 1],
+                                    "")
                             })
                         );
                     }
