@@ -34,8 +34,6 @@ export default function (context) {
             return tokenize(text).then((tokens) => {
                 tokens.forEach((token) => {
                     if (isSpecialCases(token)) {
-                        console.log("token");
-                        console.log(token);
                         report(
                             node,
                             new RuleError("ら抜き言葉を使用しています。", {
