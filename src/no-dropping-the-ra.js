@@ -53,7 +53,7 @@ export default function (context) {
                             new RuleError("ら抜き言葉を使用しています。", {
                                 index: current.word_position - 1,
                                 fix: fixer.replaceTextRange(
-                                    [prev.word_position - 1, current.word_position - 1],
+                                    [prev.word_position - 1, current.word_position],
                                     "")
                             })
                         );
